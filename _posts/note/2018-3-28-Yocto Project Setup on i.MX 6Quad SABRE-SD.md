@@ -14,8 +14,7 @@ Go to Yocto Project [Quick Start](https://www.yoctoproject.org/docs/current/ref-
 
 ### 2. Set Up The Repo Utility
 
-#### Create a bin folder in the home directory
-
+#### Create a bin folder in the home directory\\
 
 ```
  mkdir ~/bin
@@ -23,8 +22,7 @@ Go to Yocto Project [Quick Start](https://www.yoctoproject.org/docs/current/ref-
  chmod a+x ~/bin/repo
 ```
 
-#### Add the following line to the .bashrc file
-
+#### Add the following line to the .bashrc file\\
 
 ```
 export PATH=~/bin:$PATH
