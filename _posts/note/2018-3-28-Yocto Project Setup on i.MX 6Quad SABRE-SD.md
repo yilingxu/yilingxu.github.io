@@ -16,6 +16,7 @@ Go to Yocto Project [Quick Start](https://www.yoctoproject.org/docs/current/ref-
 
 #### Create a bin folder in the home directory
 
+
 ```
  mkdir ~/bin
  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
@@ -23,6 +24,7 @@ Go to Yocto Project [Quick Start](https://www.yoctoproject.org/docs/current/ref-
 ```
 
 #### Add the following line to the .bashrc file
+
 
 ```
 export PATH=~/bin:$PATH
