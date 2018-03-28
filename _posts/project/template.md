@@ -1,12 +1,6 @@
 ---
 layout: post
-title: 匠心
+title: TrustZone
 category: project
-description: Dinge von Hand gemacht.
+description: secure boot
 ---
-# [{{ page.title }}][1]
-2015-12-12 By {{ site.author_info }}
-
-
-[Mukosame]:    http://mukosame.github.io  "Mukosame"
-[1]:    {{ page.url}}  ({{ page.title }})
