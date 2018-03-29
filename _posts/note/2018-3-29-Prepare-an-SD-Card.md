@@ -14,7 +14,7 @@ category: note
 • Linux OS kernel image (zImage, eg: zImage)\\
 • Device tree file (\*.dtb, eg: zImage-imx6q-sabresd.dtb)\\
 • U-Boot bootloader image  (eg: u-boot-imx6qsabresd.imx-sd)\\
-• Root (\*.ext3 or \*.ext4, fsl-image-validation-imx-imx6qsabresd.ext4)
+• Root (\*.ext3 or \*.ext4, eg: fsl-image-validation-imx-imx6qsabresd.ext4)
 
 ### 2. Identify the SD Card
 
@@ -27,10 +27,10 @@ cat /proc/partitions
 ### 3.1 Copying the Full SD Card Image
 
 ```
-sudo dd if=<image name>.sdcard of=/dev/sdb bs=1M && sync
+sudo dd if=fsl-image-validation-imx-imx6qsabresd.sdcard of=/dev/sdb bs=1M && sync
 ```
 
-The full SD card image (with the extension .sdcard) already contains partitions, and contains U-Boot, the Linux image and device trees, and the rootfs. \\
+The full SD card image (with the extension .sdcard) already contains partitions, and contains U-Boot, Linux image, device trees, and the rootfs. \\
 "of"的参数根据自己SD card的名字而定。
 
 
