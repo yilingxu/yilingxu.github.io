@@ -14,7 +14,7 @@ Go to Yocto Project [Quick Start](https://www.yoctoproject.org/docs/current/ref-
 
 ### 2. Set Up The Repo Utility
 
-(1) Create a bin folder in the home directory
+2.1 Create a bin folder in the home directory
 
 ```
  mkdir ~/bin
@@ -22,7 +22,7 @@ Go to Yocto Project [Quick Start](https://www.yoctoproject.org/docs/current/ref-
  chmod a+x ~/bin/repo
 ```
 
-(2) Add the following line to the .bashrc file
+2.2 Add the following line to the .bashrc file
 
 ```
 export PATH=~/bin:$PATH
@@ -49,18 +49,18 @@ DISTRO=fsl-imx-x11 MACHINE=imx6qsabresd source fsl-setup-release.sh -b build-x11
 bitbake fsl-image-validation-imx
 ```
 
-(1) 其中DISTRO有如下四种设置：\\
+4.1 其中DISTRO有如下四种设置：\\
 	• fsl-imx-x11 : Only X11 graphics\\
 	• fsl-imx-wayland : Wayland weston graphics\\
 	• fsl-imx-xwayland : Wayland graphics and X11. X11 applications using EGL are not supported\\
 	• fsl-imx-fb : Frame Buffer graphics - no X11 or Wayland
 
 
-(2) MACHINE指的是板子的型号
+4.2 MACHINE指的是板子的型号
 
-(3) -b 跟的是安装目录
+4.3 -b 跟的是安装目录
 
-(4) bitbake可以编译以下多种镜像：\\
+4.4 bitbake可以编译以下多种镜像：\\
 	• core-image-minimal \\
 	• core-image-base \\
 	• core-image-sato \\
