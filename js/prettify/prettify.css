@@ -5,15 +5,15 @@
  * http://CodeTunnel.com/blog/post/71/google-code-prettify-obsidian-theme
  */
 
-.str{color: #EC7600;}
+.str{color:#EC7600;}
 .kwd{color:#56AD06;}
 .com{color:#66747B;}
-.typ{color:#678CB1;}
+.typ{color:#2D6FB8;}
 .lit{color:#BD9804;}
 .pun{color:#000000;}
 .pln{color:#000000;}
-.tag{color:#8AC763;}
-.atn{color:#E0E2E4;}
+.tag{color:#72B35D;}
+.atn{color:#6B6D6F;}
 .atv{color:#EC7600;}
 .dec{color:purple;}
 pre.prettyprint {border:0px solid #888;}
