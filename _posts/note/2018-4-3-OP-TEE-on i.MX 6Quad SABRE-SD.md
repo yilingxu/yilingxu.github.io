@@ -23,7 +23,7 @@ n [create a new partition]
 p [create a primary partition - use for both partitions]
 1 [the first partition]
 20480 [starting at offset sector]
-1208320 [size for the first partition to be used for the boot images]
+1024000 [size for the first partition to be used for the boot images]
 p [to check the partitions]
 n
 p
