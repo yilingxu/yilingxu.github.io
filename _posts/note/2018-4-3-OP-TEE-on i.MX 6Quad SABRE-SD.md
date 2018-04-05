@@ -102,6 +102,7 @@ git clone https://github.com/MrVan/linux.git -b imx_4.1.15_2.0.0_ga
 ```
 cd ~/op-tee/linux
 make ARCH=arm imx_v7_defconfig
+CROSS_COMPILE=arm-linux-gnueabihf- make ARCH=arm
 vim .config    //set CONFIG_FHANDLE=y 
 CROSS_COMPILE=arm-linux-gnueabihf- make ARCH=arm
 ```
@@ -112,7 +113,7 @@ We do not have to flash the zImage and imx6q-sabresd.dtb to SD card now, we can 
 ```
 cd ~/op-tee/optee/optee_os
 CROSS_COMPILE=arm-linux-gnueabihf- make PLATFORM=imx-mx6qsabresd ARCH=arm CFG_BUILT_IN_ARGS=y CFG_PAGEABLE_ADDR=0 CFG_NS_ENTRY_ADDR=0x12000000 CFG_DT_ADDR=0x18000000 CFG_DT=y CFG_PSCI_ARM32=y DEBUG=y CFG_TEE_CORE_LOG_LEVEL=1 CFG_BOOT_SYNC_CPU=n CFG_BOOT_SECONDARY_REQUEST=y
-cp ~/op-tee/u-boot/tools/mkimage ./   //recommend the use of mkimage from u-boot/tools/mkimage to make uTee image
+cp ~/op-tee/u-boot/tools/mkimage ./     //recommend the use of mkimage from u-boot/tools/mkimage to make uTee image
 ./mkimage -A arm -O linux -C none -a 0x4dffffe4 -e 0x4e000000 -d out/arm-plat-imx/core/tee.bin uTee
 ```
 
@@ -146,13 +147,13 @@ copy rootfs to SD card (sdb2)
 
 Under the u-boot:
 ```
-setenv serverip 192.168.10.4 #set your tftp serverip
-setenv ipaddr 192.168.10.7   #set your board ip
+setenv serverip 192.168.10.4    //set your tftp serverip
+setenv ipaddr 192.168.10.7    //set your board ip
 setenv bootargs console=ttymxc0,115200 root=/dev/mmcblk2p2 rootwait rw
 saveenv
-tftp 0x12000000 zImage  #zImage will be loaded to 0x12000000
-tftp 0x18000000 imx6q-sabresd.dtb  #dtb will loaded to 0x18000000
-tftp 0x20000000 uTee  #uTee will be loaded to 0x20000000
+tftp 0x12000000 zImage    //zImage will be loaded to 0x12000000
+tftp 0x18000000 imx6q-sabresd.dtb    //dtb will loaded to 0x18000000
+tftp 0x20000000 uTee    //uTee will be loaded to 0x20000000
 bootm 0x20000000 - 0x18000000
 ```
 
@@ -166,8 +167,3 @@ xtest
 >Reference:\\
 [http://mrvan.github.io/optee-imx6q-sabresd](http://mrvan.github.io/optee-imx6q-sabresd)\\
 [http://blog.lineo.co.jp/archives/629](http://blog.lineo.co.jp/archives/629)
-
-
-
-
-
