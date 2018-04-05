@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prepare an SD Card
+title: Prepare an SD Card for i.MX 6Quad SABRE-SD
 description: How to flash the linux image to an SD card
 category: note
 ---
@@ -134,7 +134,7 @@ sudo mount -o loop -t ext4 fsl-image-validation-imx-imx6qsabresd.ext4 rootfs
 ```
 cd rootfs/
 sudo cp -a * /home/xu/mountpoint/
-umount /home/xu/mountpoint
+sudo umount /home/xu/mountpoint
 sudo umount /home/xu/rootfs
 sync
 ```

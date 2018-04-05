@@ -31,14 +31,15 @@ export PATH=~/bin:$PATH
 ### 3. Download Yocto Project
 
 ```
-git config --global user.name zhangsan
-git config --global user.email zhangsan@163.com
-git config --list 
-mkdir fsl-release-bsp
-cd fsl-release-bsp
-repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-morty -m imx-4.9.11-1.0.0_ga.xml
-repo sync
+	git config --global user.name zhangsan
+	git config --global user.email zhangsan@163.com
+	git config --list 
+	mkdir fsl-release-bsp
+	cd fsl-release-bsp
+	repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-morty -m imx-4.9.11-1.0.0_ga.xml
+	repo sync
 ```
+
 
 等待同步完成，同步过程出错，可以用ctrl+c中断，然后执行repo sync继续同步。
 
