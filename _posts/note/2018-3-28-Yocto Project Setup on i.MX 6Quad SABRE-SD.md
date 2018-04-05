@@ -31,13 +31,13 @@ export PATH=~/bin:$PATH
 ### 3. Download Yocto Project
 
 ```
-	git config --global user.name zhangsan
-	git config --global user.email zhangsan@163.com
-	git config --list 
-	mkdir fsl-release-bsp
-	cd fsl-release-bsp
-	repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-morty -m imx-4.9.11-1.0.0_ga.xml
-	repo sync
+git config --global user.name zhangsan
+git config --global user.email zhangsan@163.com
+git config --list 
+mkdir fsl-release-bsp
+cd fsl-release-bsp
+repo init -u git://git.freescale.com/imx/fsl-arm-yocto-bsp.git -b imx-morty -m imx-4.9.11-1.0.0_ga.xml
+repo sync
 ```
 
 
